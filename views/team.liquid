@@ -1,0 +1,4 @@
+{% for person in persons %}
+    <a href="/student/{{ person.team }}">, <img src=" {{ person.avatar }} " alt="/student/{{ person.id }}" height="200px"
+        width="200px"></a>
+    {% endfor %}
