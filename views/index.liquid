@@ -1,10 +1,53 @@
 {% render 'partials/head.liquid', title: 'Squad page' %}
 
-<h2>Students</h2>
-<ul>
-  {% for person in persons %}
-    <li><a href="/student/{{ person.id }}">{{ person.name }}</a></li>
-  {% endfor %}
-</ul>
+<h1>FDND Squad Cards</h1>
+
+<section class="squad-filters">
+  <a href="/color.liquid">Favoriete kleur</a>
+  <a href="/name.liquid">Naam</a>
+  <a href="/age.liquid">Leeftijd</a>
+</section>
+
+
+
+{% comment %} {% for person in persons %}
+<a href="/student/{{ person.id }}">, <img src=" {{ person.avatar }} " alt="/student/{{ person.id }}" height="200px"
+    width="200px"></a>
+{% endfor %} {% endcomment %}
+
+
+<section class="squad-card-section">
+  <h2>Squad Cards FDND</h2>
+
+  <article class="squad-card">
+    {% for person in persons %}
+      <a href="/student/{{ person.id }}">, <img src=" {{ person.avatar }} " alt="/student/{{ person.id }}" height="200px"
+          width="200px"></a>
+      {% endfor %}
+  </article>
+</section>
+
+
+<section class="squad-card-hover">
+
+  <div class="front-card">
+    <img src=" {{ person.avatar }} " alt="Renzo Wille">
+    <h2>{{ person.id }}</h2>
+  </div>
+
+  <div class="back-card">
+    <dt>
+    <dd>{{ person.fav_color }}</dd>
+    <dd>{{ person.fav_attribute }}</dd>
+    <dd>{{ person.fav_tag }}</dd>
+    <dd>{{ person.fav_property }}</dd>
+    <dd>{{ person.fav_feature }}</dd>
+    </dd>
+  </div>
+
+</section>
+
+
+
 
 {% render 'partials/foot.liquid', squads: squads %}
