@@ -1,4 +1,16 @@
-{% for person in persons %}
-    <a href="/student/{{ person.team }}">, <img src=" {{ person.avatar }} " alt="/student/{{ person.id }}" height="200px"
-        width="200px"></a>
-    {% endfor %}
+{% render 'partials/head.liquid', title: 'Squad page' %}
+
+
+<section class="squad-card-section">
+    <h2>Squad Cards FDND</h2>
+
+    <article class="squad-cards">
+        {% for person in persons %}
+        <a href="/student/{{ person.team }}">, <img src=" {{ person.avatar }} " alt="/student/{{ person.id }}"
+                height="200px" width="200px"></a>
+        {% endfor %}
+    </article>
+</section>
+
+
+{% render 'partials/foot.liquid', squads: squads %}
