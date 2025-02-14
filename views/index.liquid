@@ -21,7 +21,7 @@
 
   <article class="squad-cards">
     {% for person in persons %}
-      <a href="/student/{{ person.id }}">, <img src=" {{ person.avatar }} " alt="/student/{{ person.id }}" height="200px"
+      <a href="/student/{{ person.id }}">, <img src=" {{ person.avatar }} " alt="/student/{{ person.name }}" {{ person.name }} height="200px"
           width="200px"></a>
       {% endfor %}
   </article>

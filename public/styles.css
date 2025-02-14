@@ -1,0 +1,44 @@
+html {
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.squad-filters {
+  a {
+    border: 1px solid rgb(0, 42, 255);
+    background-color: rgb(0, 42, 255);
+    border-radius: 10px;
+    padding: 5px;
+    color: white;
+    text-decoration: none;
+    transition: ease-in-out 0.3s;
+  }
+}
+
+.squad-filters a:hover{
+  transform: scale(1.1);
+}
+
+.squad-card-section {
+
+  .squad-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    img {
+      width: 300px;
+      height: 300px;
+      border-radius: 20px;
+      border: 1px solid {person.fav_color;} ;
+    }
+
+    /* position: relative;
+    transform-style: preserve-3d;
+    transition: 1.5s ease;
+    background-color: #6B73; */
+  }
+}
+
+/* body:hover{
+    perspective: 400px; transform: rotateY(180deg);
+  } */
