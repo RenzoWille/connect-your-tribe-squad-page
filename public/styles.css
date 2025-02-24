@@ -5,7 +5,6 @@ html {
 
 .squad-filters {
   a {
-    border: 1px solid rgb(0, 42, 255);
     background-color: rgb(0, 42, 255);
     border-radius: 10px;
     padding: 5px;
@@ -29,7 +28,10 @@ html {
       width: 300px;
       height: 300px;
       border-radius: 20px;
-      border: 1px solid {person.fav_color;} ;
+    }
+
+    a{
+      border-radius: 20px;
     }
 
     /* position: relative;

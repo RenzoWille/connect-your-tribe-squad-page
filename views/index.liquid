@@ -21,11 +21,19 @@
 
   <article class="squad-cards">
     {% for person in persons %}
-      <a href="/student/{{ person.id }}">, <img src=" {{ person.avatar }} " alt="/student/{{ person.name }}" {{ person.name }} height="200px"
-          width="200px"></a>
+      <a href="/student/{{ person.id }}">, <img src=" {{ person.avatar }} " alt="leeg" {{ person.name }} height="200px"
+          width="200px" style="border:10px solid {{person.fav_color}}"></a>
       {% endfor %}
   </article>
 </section>
+
+
+
+{% comment %} <style>
+  img{
+    border: 10px solid {{ person.fav_color }};
+  }
+</style> {% endcomment %}
 
 
 <section class="squad-card-hover">
